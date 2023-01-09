@@ -170,7 +170,7 @@ const Home = () => {
   return (
     <div className='w-full min-h-screen flex items-center justify-start md:justify-center bg-gradient-to-tr from-black to-indigo-800'>
       <Head>
-        <title>Supernate Generator | buildspace</title>
+        <title>SuperNate Generator | buildspace</title>
       </Head>
       <div className='my-16 px-4 max-w-7xl mx-auto flex flex-col md:flex-row gap-16'>
         <div className='flex flex-col gap-8'>
