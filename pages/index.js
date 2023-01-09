@@ -15,11 +15,12 @@ const people = [
 ];
 
 const styleOfList = [
-  { id: 1, name: 'a computer animated Pixar character', unavailable: false },
-  { id: 2, name: 'a renaissance portrait', unavailable: false },
-  { id: 3, name: 'an anime character', unavailable: false },
-  { id: 4, name: 'a cartoon drawing', unavailable: false },
-  { id: 5, name: 'a studio portrait', unavailable: false },
+  { id: 1, name: 'a comic book character', unavailable: false },
+  { id: 2, name: 'a computer animated Pixar character', unavailable: false },
+  { id: 3, name: 'a renaissance portrait', unavailable: false },
+  { id: 4, name: 'an anime character', unavailable: false },
+  { id: 5, name: 'a cartoon drawing', unavailable: false },
+  { id: 6, name: 'a studio portrait', unavailable: false },
 ];
 
 const artistInspirations = [
@@ -171,9 +172,9 @@ const Home = () => {
       <Head>
         <title>Supernate Generator | buildspace</title>
       </Head>
-      <div className='px-4 max-w-7xl mx-auto flex flex-col md:flex-row gap-16'>
+      <div className='my-16 px-4 max-w-7xl mx-auto flex flex-col md:flex-row gap-16'>
         <div className='flex flex-col gap-8'>
-          <div className='mt-8 md:mt-0 flex flex-col gap-4'>
+          <div className='flex flex-col gap-4'>
             <h1 className='text-white text-4xl md:text-7xl font-bold tracking-tight'>
               SuperNate Generator
             </h1>
@@ -402,15 +403,12 @@ const Home = () => {
             <div className='text-base text-gray-200'>{fullPrompt}</div>
           </div>
           <div className='flex flex-col gap-4'>
-            {/* <input
-              className='p-4 w-full bg-gray-900 text-xl text-white rounded-xl border-gray-500 border'
-              value={input}
-              onChange={onChange}
-            /> */}
-            {retryError && (
+            {retryError ? (
               <div className='p-2 bg-red-500 rounded-lg text-white'>
                 {retryError}
               </div>
+            ) : (
+              ''
             )}
             <div className='flex flex-row justify-end'>
               <button
